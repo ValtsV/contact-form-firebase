@@ -29,6 +29,16 @@ function submitForm(e) {
   //   save message
 
   saveMessage(name, company, email, phone, message);
+
+  //   show alert
+
+  document.querySelector(".alert").style.display = "block";
+
+  document.getElementById("contactForm").reset();
+
+  setTimeout(function () {
+    document.querySelector(".alert").style.display = "none";
+  }, 3000);
 }
 
 function getInputVal(id) {
